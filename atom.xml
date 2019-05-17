@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2019-05-11T04:41:43.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://panpan.pub/"/>
+  <updated>2019-05-17T16:54:39.000Z</updated>
+  <id>http://panpan.pub/</id>
   
   <author>
     <name>John Doe</name>
@@ -17,19 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/05/11/hello-world/"/>
-    <id>http://yoursite.com/2019/05/11/hello-world/</id>
+    <title>Sublime text2 for Mac 解决There are no packages...</title>
+    <link href="http://panpan.pub/2019/05/11/sublimetext/"/>
+    <id>http://panpan.pub/2019/05/11/sublimetext/</id>
     <published>2019-05-11T04:41:43.000Z</published>
-    <updated>2019-05-11T04:41:43.000Z</updated>
+    <updated>2019-05-17T16:54:39.000Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Sat May 11 2019 15:13:30 GMT+0800 (China Standard Time) --><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Sat May 18 2019 01:34:39 GMT+0800 (China Standard Time) --><h2 id="问题引出："><a href="#问题引出：" class="headerlink" title="问题引出："></a>问题引出：</h2><p>&nbsp;&nbsp;最近初学markdown语法，在阅读完<a href="https://www.jianshu.com/p/22f029129b11" target="_blank" rel="noopener">https://www.jianshu.com/p/22f029129b11</a> 的文章之后打算在sublime text中安装MarkdownEditing、MarkdownPreview、MarkdownLivePreview三个markdown插件。在command+shift+p，选择Package control: install packages 后，出现There are no packages availavle for installation错误。</p><p>&nbsp;&nbsp;尝试了网上的多种解决办法，包括下载替换Package Control包，不支持ipv6绑定host等方法，均无法解决。</p><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>&nbsp;&nbsp;sublime在install Package时会调用channel_v3.json文件，而该文件存于网络，我尝试在Terminal中ping 这个地址 ，发现为timeout，这也是出错的原因。</p><p>&nbsp;&nbsp;首先下载channel_v3.json（请自行百度），点击Preferences&gt;Browse Packages，将下载的channel_v3.json 复制进去。打开Preferences-&gt;Package Setting-&gt;Package Control -&gt;Setting Use Defaul，设置本地访问（即将channels值修改为channel_v3.json存放的路径）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"channels"</span>: [</span><br><span class="line"></span><br><span class="line">  <span class="string">"/Users/XXX/Library/Application/Sublime Text 2/Packages/channel_v3.json"</span></span><br><span class="line"></span><br><span class="line"> ],</span><br></pre></td></tr></table></figure><h5 id="就可以正常的使用插件。"><a href="#就可以正常的使用插件。" class="headerlink" title="就可以正常的使用插件。"></a>就可以正常的使用插件。</h5><h3 id="附：MacOS中复制文件路径的方法"><a href="#附：MacOS中复制文件路径的方法" class="headerlink" title="附：MacOS中复制文件路径的方法"></a>附：MacOS中复制文件路径的方法</h3><p>选择文件右击，点Get Info，第一栏General中的Where即为文件地址，可以直接复制，然后在文本中粘贴。</p><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Sat May 11 2019 15:13:30 GMT+0800 (China Standard Time) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noo
+        &lt;!-- build time:Sat May 18 2019 01:34:39 GMT+0800 (China Standard Time) --&gt;&lt;h2 id=&quot;问题引出：&quot;&gt;&lt;a href=&quot;#问题引出：&quot; class=&quot;headerlink&quot; title=&quot;问题引出：&quot;&gt;
       
     
     </summary>
