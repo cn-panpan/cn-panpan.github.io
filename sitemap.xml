@@ -16,13 +16,6 @@
   </url>
   
   <url>
-    <loc>http://panpan.pub/about/index.html</loc>
-    
-    <lastmod>2019-05-11T05:01:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://panpan.pub/books/index.html</loc>
     
     <lastmod>2019-05-11T05:01:58.000Z</lastmod>
@@ -30,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://panpan.pub/categories/index.html</loc>
+    <loc>http://panpan.pub/about/index.html</loc>
     
     <lastmod>2019-05-11T05:01:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://panpan.pub/tags/index.html</loc>
+    <loc>http://panpan.pub/categories/index.html</loc>
     
     <lastmod>2019-05-11T05:01:58.000Z</lastmod>
     
@@ -52,6 +45,13 @@
   
   <url>
     <loc>http://panpan.pub/links/index.html</loc>
+    
+    <lastmod>2019-05-11T05:01:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://panpan.pub/tags/index.html</loc>
     
     <lastmod>2019-05-11T05:01:58.000Z</lastmod>
     
